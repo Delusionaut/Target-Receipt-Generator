@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; }
+
+.app-container { min-height: 100vh; }
+.app-header { background: linear-gradient(135deg, #CC0000 0%, #990000 100%); color: white; padding: 20px 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+.app-header h1 { margin: 0; font-size: 24px; font-weight: 600; }
+
+.main-content { display: flex; gap: 30px; padding: 30px; max-width: 1400px; margin: 0 auto; }
+
+.builder-panel { flex: 0 0 400px; background: white; border-radius: 8px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); height: fit-content; }
+.builder-panel h2 { margin: 0 0 20px 0; font-size: 18px; color: #333; }
+.builder-panel h3 { margin: 25px 0 15px 0; font-size: 14px; color: #666; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+
+.form-section input { width: 100%; padding: 10px 12px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
+
+.item-row { display: flex; gap: 8px; margin-bottom: 8px; }
+.remove-btn { width: 30px; background: #ff4444; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 18px; }
+.add-btn { width: 100%; padding: 10px; background: #f0f0f0; border: 1px dashed #999; border-radius: 4px; cursor: pointer; margin-top: 10px; }
+
+.actions { margin-top: 25px; display: flex; flex-direction: column; gap: 10px; }
+.primary-btn { padding: 12px; background: #CC0000; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 15px; font-weight: 600; }
+.secondary-btn { padding: 12px; background: #f0f0f0; color: #333; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; font-size: 15px; }
+
+.preview-panel { flex: 1; display: flex; justify-content: center; align-items: flex-start; padding: 20px; background: #e8e8e8; border-radius: 8px; min-height: 600px; }
+
+.receipt-container { 
+  width: 302px; 
+  background: #FFFFFF; 
+  padding: 20px 15px; 
+  font-family: 'Roboto Mono', monospace; 
+  font-size: 11px; 
+  line-height: 1.35; 
+  color: #000000; 
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+.css-bullseye { position: relative; width: 90px; height: 90px; margin: 0 auto 8px auto; }
+.bullseye-outer { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90px; height: 90px; border: 11px solid #000; border-radius: 50%; box-sizing: border-box; }
+.bullseye-middle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 52px; height: 52px; border: 11px solid #000; border-radius: 50%; box-sizing: border-box; }
+.bullseye-inner { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 18px; height: 18px; background: #000; border-radius: 50%; }
+
+.store-name { text-align: center; font-size: 13px; letter-spacing: 3px; margin-bottom: 6px; font-weight: 500; }
+
+.store-info { text-align: center; line-height: 1.4; margin-bottom: 4px; }
+.store-info div { font-size: 10px; }
+
+.separator-heavy { font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 11px; margin: 4px 0; text-align: center; line-height: 1; white-space: pre; }
+.separator-light { font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 11px; margin: 4px 0; text-align: center; line-height: 1; white-space: pre; }
+
+.date-time { text-align: center; margin: 6px 0; font-size: 10.5px; }
+.register-info { font-family: 'Roboto Mono', monospace; font-size: 10.5px; line-height: 1.5; margin: 6px 0; white-space: pre; text-align: center; }
+
+.items-section { margin: 4px 0; width: 100%; }
+.item-line { display: flex; justify-content: space-between; line-height: 1.4; font-size: 11px; width: 100%; }
+.item-name { flex: 1; text-align: left; padding-right: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.item-price { text-align: right; white-space: nowrap; min-width: 55px; }
+
+.totals-section { margin: 4px 0; width: 100%; }
+.total-line { display: flex; justify-content: space-between; line-height: 1.45; font-size: 11px; }
+.total-bold { font-weight: 700; font-size: 11.5px; }
+
+.redcard-section { margin: 8px 0; text-align: center; width: 100%; font-size: 10px; line-height: 1.35; }
+.return-policy { margin: 6px 0; width: 100%; text-align: center; }
+.return-title { font-weight: 500; font-size: 10px; margin-bottom: 3px; text-transform: uppercase; }
+.return-text { font-size: 9.5px; line-height: 1.3; }
+
+.barcode-section { margin: 6px 0; text-align: center; width: 100%; }
+.barcode-svg { width: 100%; height: 45px; display: block; }
+.barcode-number { font-family: 'Roboto Mono', monospace; font-size: 11px; letter-spacing: 2px; margin-top: 2px; }
+
+.survey-section { margin: 8px 0; text-align: center; font-size: 9px; line-height: 1.35; width: 100%; }
+.survey-url { font-weight: 500; letter-spacing: 1px; margin: 2px 0; font-size: 10px; }
+.survey-id { font-size: 9px; letter-spacing: 0.5px; }
+
+.footer { text-align: center; font-weight: 700; font-size: 10px; margin-top: 8px; letter-spacing: 0.5px; }
+
+@media (max-width: 900px) {
+  .main-content { flex-direction: column; }
+  .builder-panel { flex: none; width: 100%; }
+}
